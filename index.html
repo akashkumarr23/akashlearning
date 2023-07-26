@@ -6,53 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beautiful HTML Page</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
-
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1rem 0;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .item {
-      width: calc(33.33% - 20px);
-      margin-bottom: 20px;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .item img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1rem 0;
-    }
-    #myPDF{
-      width: 85%;
-      height: 975px;
-    }
+    /* Your CSS styles here */
   </style>
 </head>
 
@@ -73,19 +27,24 @@
       <li class="item"><img src="assets/physics.png" alt="Image 8"></li>
       <li class="item"><img src="assets/physics.png" alt="Image 9"></li>
       <li class="item"><img src="assets/physics.png" alt="Image 10"></li>
-      
     </ul>
   </div>
-   <iframe  id="myPDF" src="assets/admission.pdf" frameborder="0"></iframe>
-      
-  <h1>akash akashaksh
-    akash
 
-  </h1>
+  <!-- Add a button to open the PDF -->
+  <button id="openPdfButton">Open PDF</button>
+
+  <h1>akash akashaksh akash</h1>
 
   <footer>
     <p>&copy; 2023 Your Website</p>
   </footer>
+
+  <!-- JavaScript to open the PDF in a new page -->
+  <script>
+    document.getElementById("openPdfButton").addEventListener("click", function() {
+      window.open("assets/admission.pdf", "_blank");
+    });
+  </script>
 </body>
 
 </html>
